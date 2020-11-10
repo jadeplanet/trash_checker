@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Trash Checker</title>
+    <style>
+      body {
+        background: lightskyblue;
+      }
+      a {
+        text-decoration: none;
+      }
+
+      .search {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      .search h1 {
+        color: #0f416f;
+        /* text-shadow: 0 0 5px rgba(0, 0, 0, 0.6); */
+        text-align: center;
+        font-weight: normal;
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.5;
+      }
+      .search input[type='text'] {
+        font-size: 18px;
+        width: 400px;
+        padding: 20px;
+        border: none;
+        margin-right: -6px;
+        border-radius: 40px 0 0 40px;
+        outline: none;
+        padding-left: 40px;
+        box-sizing: border-box;
+      }
+      .search button[type='submit'] {
+        width: 150px;
+        padding: 20px;
+        border: none;
+        border-radius: 0 40px 40px 0;
+        cursor: pointer;
+        background-color: dodgerblue;
+        color: #fff;
+        outline: none;
+        font-size: 18px;
+      }
+      .search button[type='submit']:hover {
+        background-color: royalblue;
+      }
+      .search input[type='text']::placeholder {
+        font-size: 20px;
+        color: lightgray;
+      }
+      .search input[type='text']:focus::placeholder {
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/result" method="GET" class="search">
+      <h1>
+        음식물쓰레기가 맞는지 궁금하신가요?<br />
+        아래 검색창에서 확인해보세요!
+      </h1>
+      <div class="container">
+        <input type="text" placeholder="(예) 달걀껍데기" name="foodname" />
+        <button type="submit">찾아보기</button>
+      </div>
+    </form>
+  </body>
+</html>

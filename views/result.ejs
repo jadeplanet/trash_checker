@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Trash Checker</title>
+    <style>
+      body {
+        background: lightskyblue;
+        line-height: 1.5;
+        margin: 0;
+        font-weight: 300;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        color: #222;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .result {
+        width: 800px;
+        background-color: #e7f5ff;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 25px;
+        box-sizing: border-box;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .result button.go-home {
+        background-color: #339af0;
+        color: #fff;
+        width: 200px;
+        padding: 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        margin: 0 20px;
+        outline: none;
+      }
+
+      .result button.go-home:hover {
+        background-color: #1864ab;
+      }
+
+      .result h1 {
+        color: royalblue;
+        text-align: center;
+        font-weight: normal;
+        margin-bottom: 30px;
+        font-size: 36px;
+        line-height: 1.5;
+      }
+
+      .result h2 {
+        color: #1864ab;
+        text-align: center;
+        font-weight: normal;
+        line-height: 2;
+      }
+      .button-box {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="result">
+      <h1>검색결과</h1>
+      <h2><%= data.trash%> 은(는) <%= data.type%>입니다.</h2>
+      <div class="button-box">
+        <button class="go-home"><a href="/">홈 화면으로 이동</a></button>
+      </div>
+    </div>
+  </body>
+</html>
